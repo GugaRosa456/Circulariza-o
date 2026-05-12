@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("991.png");
+    background-size: cover;
+    background-position: center;
+    font-family: "Copperplate", fantasy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 700px;
+    padding: 20px;
+    text-align: center;;
+}
+h1{
+    margin-bottom: 30px;
+}
+.avatares{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    
+}
+.avatar{
+    text-align: center;
+    
+}
+.avatar img{
+    width: 150px;
+    height: 150px;
+}
+.avatar p{
+    background-color: #8b8b5a;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input{
+    padding: 10px;
+    background-color: #8b8b5a;
+    border-radius: 10px;
+}
+input::placeholder {
+    color: rgb(73, 73, 73);
+}
+button{
+    padding: 10px 20px;
+    background-color: #8b8b5a;
+    border-radius: 10px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 20px;
+     font-family: "Copperplate", fantasy;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>ESCOLHA SEU AVATAR</h1>
+    <div class="avatares">
+        <div class="avatar">
+            <img src="Feminino.png">
+            <p>Feminino</p>
+        </div>
+        <div class="avatar">
+            <img src="Masculino.png">
+            <p>Masculino</p>
+        </div>
+    </div>
+    <div class="formulario">
+        <input class="text" placeholder="Nome">
+        <input type="text" placeholder="Escola">
+        <input type="number" placeholder="Idade">
+         <br>
+    </div>
+     <button>Iniciar QUIZ</button>
+</div>
+</body>
+</html>
