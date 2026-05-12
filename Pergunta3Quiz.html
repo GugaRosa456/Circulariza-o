@@ -116,21 +116,21 @@ h1{
 </div>
 <div class="container">
     <div class="estrelas">
-        ⭐ ⭐ ⭐
+        ⭐ ⭐ ⭐ ⭐ ⭐
     </div>
     <h1>Qual Parque pertence a Brusque?</h1>
    <div class="Imagens">
     <div class="imagem"  onclick="errou(this)">
-        <img src="228.jpeg">
-        <p>Gi-ra-fa</p>
-    </div>
-    <div class="imagem" onclick="errou(this)">
-        <img src="227.jpeg">
-        <p>Ze-bra</p>
+        <img src="214.jpeg">
+        <p>Tra-je de Car-na-val</p>
     </div>
     <div class="imagem correta" onclick="acertou()">
-        <img src="11.jpeg">
-        <p>Ca-pi-va-ra</p>
+        <img src="7.jpeg">
+        <p>Tra-je do Fritz</p>
+    </div>
+    <div  class="imagem"  onclick="errou(this)">
+        <img src="211.jpeg">
+        <p>Tra-je São Jo-ão</p>
     </div>
 </div>
 </div>
@@ -153,7 +153,7 @@ if(localStorage.getItem("erros") === null){
 function acertou(){
     let acertos = Number(localStorage.getItem("acertos"));
     localStorage.setItem("acertos", acertos + 1);
-    window.location.href = "Pergunta3Quiz.html";
+    window.location.href = "Pergunta4Quiz.html";
 }
 function errou(elemento){
     let erros = Number(localStorage.getItem("erros"));
@@ -163,7 +163,6 @@ function errou(elemento){
         elemento.classList.add("sumir");
     }, 300);
 }
-
 
 </script>
 </body>
