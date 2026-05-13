@@ -90,8 +90,8 @@ button{
     </div>
     <div class="formulario">
         <input id="nome" type="text" placeholder="Nome">
-        <input type="text" placeholder="Escola">
-        <input type="text" placeholder="Idade">
+        <input id="escola" type="text" placeholder="Escola">
+        <input id="idade" type="text" placeholder="Idade">
         <br>
         <button onclick="iniciarQuiz()">Iniciar QUIZ</button>
     </div>
@@ -105,7 +105,7 @@ function selecionarAvatar(imagem, elemento){
     });
     elemento.classList.add("selecionado");
 }
-function iniciarQuiz(){
+function iniciarQuiz(){ 
     let nome = document.getElementById("nome").value;
     if(nome === ""){
         alert("Digite seu nome!");
@@ -116,9 +116,15 @@ function iniciarQuiz(){
         return;
     }
     localStorage.setItem("nomeJogador", nome);
+    localStorage.setItem("escolaJogador", escola);
+    localStorage.setItem("idadeJogador", idade);
+    console.log(nome, escola, idade);
     localStorage.setItem("avatarJogador", avatarEscolhido);
+    localStorage.setItem("acertos", 0);
+    localStorage.setItem("erros", 0);
     window.location.href = "Pergunta1Quiz.html";
 }
+</script>
 </script>
 </body>
 </html>
