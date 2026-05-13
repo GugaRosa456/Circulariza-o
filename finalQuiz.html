@@ -122,6 +122,8 @@ document.getElementById("erros").innerText = "Erros: " + erros;
 
 
 function reiniciarQuiz(){
+     localStorage.setItem("acertos", 0);
+    localStorage.setItem("erros", 0);
     window.location.href = "Pergunta1Quiz.html";
 }
 
