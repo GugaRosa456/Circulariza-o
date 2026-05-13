@@ -11,16 +11,17 @@ body{
     background-image: url("991.png");
     background-size: cover;
     background-position: center;
-    font-family: "Copperplate", fantasy;
+    font-family: "Arial", Sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    font-size: 5px;
 }
 .container{
-    width: 700px;
+    width: 800px;
     padding: 20px;
-    text-align: center;;
+    text-align: center;
+    font-size: 35px;
 }
 h1{
     margin-bottom: 30px;
@@ -39,12 +40,14 @@ h1{
 .avatar img{
     width: 150px;
     height: 150px;
+
 }
 .avatar p{
     background-color: #8b8b5a;
     padding: 5px;
     margin-top: 5px;
     border-radius: 10px;
+    font-size: 35;
 }
 .selecionado{
     border: 4px solid #ffd700;
@@ -55,11 +58,15 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    height: 300px;
+
+   
 }
 input{
     padding: 10px;
     background-color: #8b8b5a;
     border-radius: 10px;
+    height: 150px;
 }
 input::placeholder {
     color: rgb(73, 73, 73);
@@ -72,6 +79,8 @@ button{
     cursor: pointer;
     font-size: 20px;
      font-family: "Copperplate", fantasy;
+   
+
 }
 </style>
 </head>
@@ -81,19 +90,19 @@ button{
     <div class="avatares">
         <div class="avatar" onclick="selecionarAvatar('Feminino.png', this)">
             <img src="Feminino.png">
-            <p>Feminino</p>
+            <p>FEMININO</p>
         </div>
         <div class="avatar" onclick="selecionarAvatar('Masculino.png', this)">
             <img src="Masculino.png">
-            <p>Masculino</p>
+            <p>MASCULINO</p>
         </div>
     </div>
     <div class="formulario">
         <input id="nome" type="text" placeholder="Nome">
-        <input id="escola" type="text" placeholder="Escola">
-        <input id="idade" type="text" placeholder="Idade">
+        <input type="text" placeholder="Escola">
+        <input type="text" placeholder="Idade">
         <br>
-        <button onclick="iniciarQuiz()">Iniciar QUIZ</button>
+        <button onclick="iniciarQuiz()">INICIAR QUIZ</button>
     </div>
 </div>>
 <script>
@@ -105,7 +114,7 @@ function selecionarAvatar(imagem, elemento){
     });
     elemento.classList.add("selecionado");
 }
-function iniciarQuiz(){ 
+function iniciarQuiz(){
     let nome = document.getElementById("nome").value;
     if(nome === ""){
         alert("Digite seu nome!");
@@ -116,15 +125,9 @@ function iniciarQuiz(){
         return;
     }
     localStorage.setItem("nomeJogador", nome);
-    localStorage.setItem("escolaJogador", escola);
-    localStorage.setItem("idadeJogador", idade);
-    console.log(nome, escola, idade);
     localStorage.setItem("avatarJogador", avatarEscolhido);
-    localStorage.setItem("acertos", 0);
-    localStorage.setItem("erros", 0);
     window.location.href = "Pergunta1Quiz.html";
 }
-</script>
 </script>
 </body>
 </html>

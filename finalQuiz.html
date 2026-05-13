@@ -25,6 +25,7 @@ body{
     border-radius: 15px;
     border: #000000 solid 2px;
     font-size: 35px;
+
 }
 h1{
     margin-bottom: 30px;
@@ -53,6 +54,9 @@ button{
      font-family: "Copperplate", fantasy;
     position: relative;
     top: 100px;
+    width: 400px;
+    height: 75px;
+    font-size: 25px;
 }
 .jogador-info{
     position: absolute;
@@ -90,17 +94,17 @@ button{
 </div>
 <div class="container">
     
-    <h1>Jogo Concluido</h1>
+    <h1>Jogo CONCLUÍDO</h1>
     
     <div class="formulario">
-        <label for="Suapontuação">Sua Pontuação:</label>
+        <label for="Suapontuação">SUA PONTUAÇÃO</label>
          <div class="estrelas">
         ⭐ ⭐ ⭐ ⭐ ⭐ 
     </div>
         <label for="acertos" id="acertos"></label>
         <label for="erros" id="erros"></label>
     </div>
-       <button onclick="reiniciarQuiz()">Tentar Novamente</button>
+       <button onclick="reiniciarQuiz()">TENTAR NOVAMENTE?</button>
 </div>
   
    </body>
@@ -117,8 +121,8 @@ document.getElementById("avatarJogador").src = avatar;
 let acertos = localStorage.getItem("acertos");
 let erros = localStorage.getItem("erros");
 
-document.getElementById("acertos").innerText = "Acertos: " + acertos;
-document.getElementById("erros").innerText = "Erros: " + erros;
+document.getElementById("acertos").innerText = "ACERTOS: " + acertos;
+document.getElementById("erros").innerText = "ERROS: " + erros;
 
 
 function reiniciarQuiz(){

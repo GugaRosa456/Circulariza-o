@@ -11,7 +11,7 @@ body{
     background-image: url("991.png");
     background-size: cover;
     background-position: center;
-    font-family: "Copperplate", fantasy;
+    font-family: "Arial", Sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +42,7 @@ body{
     text-align: center;
     position: relative;
     top: -100px;
+        font-size: 35px;
 }
 
 h1{
@@ -87,8 +88,8 @@ h1{
     }
 }
 .imagem img{
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
 }
 .imagem p{
@@ -96,15 +97,16 @@ h1{
     padding: 5px;
     margin-top: 5px;
     border-radius: 10px;
-    width: 150px;
+    width: 250px;
+    font-size: 35px;
 }
 .estrelas{
     margin-top: 30px;
     font-size: 50px;
     letter-spacing: 10px;
     position: relative;
-    top: -150px;
     left: 700px;
+    top: 50px;
 }
 </style>
 </head>
@@ -118,19 +120,19 @@ h1{
     <div class="estrelas">
         ⭐ ⭐ ⭐ ⭐ ⭐ 
     </div>
-    <h1>Qual Parque pertence a Brusque?</h1>
+    <h1>QUAL CASA TÍPICA É TRADICIONAL NA REGIÃO?</h1>
    <div class="Imagens">
     <div class="imagem"  onclick="errou(this)" >
         <img src="207.jpeg">
-        <p>O-ca</p>
+        <p>O-CA</p>
     </div>
     <div  class="imagem correta" onclick="acertou()">
         <img src="5.jpeg">
-        <p>Casa Enxaimel</p>
+        <p>CASA ENXAIMEL</p>
     </div>
     <div class="imagem" onclick="errou(this)">
-        <img src="222.jpeg">
-        <p>Tos-ca-na</p>
+        <img src="204.jpg">
+        <p>TOS-CA-NA</p>
     </div>
 </div>
 </div>
@@ -153,7 +155,7 @@ if(localStorage.getItem("erros") === null){
 function acertou(){
     let acertos = Number(localStorage.getItem("acertos"));
     localStorage.setItem("acertos", acertos + 1);
-    window.location.href = "finalQuiz.html";
+    window.location.href = "Pergunta9Quiz.html";
 }
 function errou(elemento){
     let erros = Number(localStorage.getItem("erros"));
